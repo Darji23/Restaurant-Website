@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>book_now (copy)</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aldrich&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alex+Brush&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amarante&amp;display=swap">
+    <link rel="stylesheet" href="Pretty-Login-Form-.css">
+</head>
+
+<body>
+    <div id="NavBar">
+        <section id="NavBar-Section" style="background: #000000;">
+            <div class="container" id="NavBar-Div" style="background: #000000;margin-right: 0px;margin-left: 0px;padding-right: 0px;padding-left: 0px;height: 116px;width: 1232px;">
+                <div class="row" id="NavBar-Row" style="height: 114px;">
+                    <div class="col-md-6" id="NavBar-Col-One" style="padding-right: 0px;padding-left: 0px;width: 343px;">
+                        <h1 id="Col-One-Head" style="color: rgb(255,255,255);font-family: 'Alex Brush', serif;width: 221px;margin-top: 36px;margin-left: 98px;">Le Pappilion</h1>
+                    </div>
+                    <div class="col-md-6" id="NavBar-Col-Two" style="width: 768px;padding-right: 0px;padding-left: 0px;">
+                        <a href="index.html"><p id="Col-Two-Para-One" style="width: 100px;margin-top: 53px;margin-left: 845px;color: rgb(202,203,204);font-family: Amarante, serif;">Contact Us</p></a>
+                        <a href="gallery.html"><p id="Col-Two-Para-Two" style="width: 100px;margin-top: -40px;margin-left: 755px;color: rgb(202,203,204);font-family: Amarante, serif;">Gallery</p></a>
+                        <a href="index.html"><p id="Col-Two-Para-Three" style="width: 100px;margin-bottom: 16px;margin-top: -40px;margin-left: 668px;color: rgb(202,203,204);font-family: Amarante, serif;">Home</p></a>
+                        <a href="booking-page.html"><button class="btn btn-primary" id="button-one" type="button" style="margin-top: -85px;margin-left: 947px;margin-right: -103px;padding-right: 13px;padding-left: 11px;background: rgb(255,255,255);border-style: solid;border-color: rgb(255,255,255);font-family: Aldrich, sans-serif;color: rgb(0,0,0);width: 147.25px;height: 59px;">Book Your Table Now</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="Home">
+        <section id="Home-Top" style="height: 600px;margin-top: 0px;padding-top: 0px;padding-bottom: 0px;background: #000000;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="color: rgb(255,255,255);border-style: none;width: 669px;margin-left: 299px;margin-top: 60px;">Your Booking is Done Succesfully!!!</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p style="color: rgb(255,255,255);width: 513px;margin-left: 260px;font-family: Amarante, serif;margin-top: 78px;font-size: 24px;">
+                            Ticket-Number:<span id="result-ticket"></span>
+                            <br>Name :<span id="result-name"></span>
+                            <br>Mobile Number:<span id="result-mobile"></span>
+                            <br>Number of Guest:<span id="result-table"></span>
+                            <br>Parking Vallet Required:<span id="result-checkbox"></span>
+                            <br>Timing:<span id="result-radio"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+
+        window.addEventListener('load', () => {
+
+
+            let x = Math.floor((Math.random() * 10000) + 1);
+            const name = sessionStorage.getItem('NAME');
+            const mobile = sessionStorage.getItem('MOBILE');
+            const table = sessionStorage.getItem('TABLE');
+            const checkbox = sessionStorage.getItem('CHECKBOX');
+            const radiovalue = sessionStorage.getItem('RADIOVALUE');
+
+            document.getElementById('result-name').innerHTML = name;
+            document.getElementById('result-mobile').innerHTML = mobile;
+            document.getElementById('result-table').innerHTML = table;
+            document.getElementById('result-checkbox').innerHTML = checkbox;
+            document.getElementById('result-radio').innerHTML = radiovalue;
+            document.getElementById('result-ticket').innerHTML = x;
+
+
+})
+        document.getElementById('button-one').addEventListener("mouseover",mouseOverOne);
+        document.getElementById('button-one').addEventListener("mouseout",mouseOutOne);
+
+        function mouseOverOne(){
+            document.getElementById('button-one').style.color = "white";
+            document.getElementById('button-one').style.background = "black";
+        }
+
+        function mouseOutOne(){
+            document.getElementById('button-one').style.color="black";
+            document.getElementById('button-one').style.background="white";
+        }
+    </script>
+</body>
+
+</html>
